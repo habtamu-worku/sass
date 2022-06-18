@@ -9,8 +9,8 @@ process][], very small features can follow the [fast-track process][] instead.
 [fast-track process]: #fast-track
 
 ## Table of Contents
-P
-i am in life
+
+# i am in life
 
 
 * [Process](#process)
