@@ -144,8 +144,11 @@ descendant combinator, the complex selector doesn't have a trailing combinator.
 
 ### Bogus Selector
 
-A [complex selector] is *bogus* if it has a leading or [trailing combinator]. A
-selector list is *bogus* if any of its complex selectors are bogus.
+A [complex selector] is *bogus* if it has a leading or [trailing combinator], or
+if any of the simple selectors it transitively contains is a selector pseudo
+with a bogus selector.
+
+A selector list is *bogus* if any of its complex selectors are bogus.
 
 [trailing combinator]: #trailing-combinator
 
@@ -201,7 +204,8 @@ In particular:
 
 * A complex selector is instead considered [bogus] if it contains any leading
   combinators, if its final component contains any combinators, or if any of its
-  components contains multiple combinators.
+  components contains multiple combinators, or if any of the simple selectors it
+  transitively contains is a selector pseudo with a bogus selector.
 
 * The newly-added errors produce deprecation warnings instead.
 
